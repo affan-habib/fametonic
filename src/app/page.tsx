@@ -4,6 +4,7 @@
 import { pageData } from '@/data/pageData';
 import { useState } from 'react';
 import Image from 'next/image';
+import type { MenuItem } from '@/types';
 
 export default function Page() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -40,8 +41,8 @@ export default function Page() {
 
           {/* Desktop menu */}
           <div className="hidden md:inline-flex items-end justify-center gap-10 relative flex-[0_0_auto]">
-            {pageData.navigation.menuItems.map((item, index) => (
-              <a key={index} className="relative w-[76px] mt-[-1.00px] font-figtree font-semibold text-[#a9a9a9] text-lg text-center tracking-[0] leading-[normal] cursor-pointer hover:text-white transition-colors">
+            {pageData.navigation.menuItems.map((item: MenuItem, index: number) => (
+              <a key={index} href={item.href} className="relative w-[76px] mt-[-1.00px] font-figtree font-semibold text-[#a9a9a9] text-lg text-center tracking-[0] leading-[normal] cursor-pointer hover:text-white transition-colors">
                 {item.label}
               </a>
             ))}
@@ -61,7 +62,7 @@ export default function Page() {
           {isMobileMenuOpen && (
             <div className="md:hidden absolute top-full right-6 mt-2 bg-black/90 backdrop-blur-sm rounded-lg border border-gray-700 shadow-lg z-50">
               <div className="flex flex-col py-2">
-                {pageData.navigation.menuItems.map((item, index) => (
+                {pageData.navigation.menuItems.map((item: MenuItem, index: number) => (
                   <a 
                     key={index} 
                     href={item.href}
@@ -69,9 +70,7 @@ export default function Page() {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <span>{item.label}</span>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                    <Image src="/chevron-right.svg" alt="Chevron" width={16} height={16} />
                   </a>
                 ))}
               </div>
@@ -99,7 +98,7 @@ export default function Page() {
 
                   {/* Feature list */}
                   <div className="flex flex-col items-start gap-[13px] relative self-stretch w-full">
-                    {pageData.mainContent.features.map((feature, index) => (
+                    {pageData.mainContent.features.map((feature: string, index: number) => (
                       <div
                         key={index}
                         className="flex items-center gap-2.5 relative self-stretch w-full"

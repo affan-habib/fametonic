@@ -1,4 +1,6 @@
-export const pageData = {
+import type { PageData } from '@/types';
+
+export const pageData: PageData = {
   // Top promotional banner
   topBanner: {
     title: "🚀 FRESH BEGINNINGS SALE",

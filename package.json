@@ -1,7 +1,8 @@
 {
   "name": "fametonic-landing-page",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
+  "author": "Affan Habib",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
