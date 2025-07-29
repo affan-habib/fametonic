@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fametonic Landing Page
 
-## Getting Started
+A modern, responsive landing page for Fametonic - helping aspiring influencers turn social media into a profitable career.
 
-First, run the development server:
+## 🌐 Live Demo & Repository
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **🚀 Live Site**: [https://fametonic-tau.vercel.app/](https://fametonic-tau.vercel.app/)
+- **📂 GitHub Repository**: [https://github.com/affan-habib/fametonic](https://github.com/affan-habib/fametonic)
+
+## 🚀 Features
+
+- **Responsive Design**: Mobile-first approach with seamless desktop experience
+- **Modern UI/UX**: Clean, professional design with gradient backgrounds and smooth transitions
+- **Interactive Elements**: Mobile hamburger menu with enhanced touch areas
+- **Optimized Performance**: Custom fonts, optimized images, and efficient asset management
+- **SEO Ready**: Proper metadata, semantic HTML, and search engine optimization
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.4.4
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Fonts**: Google Fonts (Urbanist, Figtree)
+- **Icons**: Custom SVG assets
+- **Deployment**: Vercel-ready
+
+## 📱 Responsive Features
+
+### Mobile Optimizations
+- Touch-friendly hamburger menu with 44px minimum touch targets
+- Responsive image sizing with viewport constraints
+- Optimized text line breaks for mobile readability
+- Centered content layout with proper spacing
+- Horizontal scroll prevention
+
+### Desktop Experience
+- Full navigation menu with hover effects
+- Larger typography and spacing
+- Side-positioned app mockup image
+- Professional layout with optimal content hierarchy
+
+## 🎨 Design Highlights
+
+- **Color Scheme**: Dark theme with cyan (#00E7F9) and pink (#FC004E) accents
+- **Typography**: Urbanist for headings, Figtree for body text
+- **Gradients**: Custom linear gradients for CTAs and promotional banners
+- **Shadows**: Subtle text shadows and button shadows for depth
+- **Animations**: Smooth hover transitions and interactive states
+
+## 📁 Project Structure
+
+```
+├── public/
+│   ├── fametonic-logo.png
+│   ├── mobile-app-mockup.png
+│   ├── hamburger-menu.svg
+│   └── arrow-right.svg
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   └── data/
+│       └── pageData.tsx
+├── tailwind.config.js
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd fametonic-landing-page
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+```bash
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Deploy on Vercel
+## 📝 Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 Key Components
+
+### Data Management
+All content is centralized in `src/data/pageData.tsx` for easy maintenance and updates.
+
+### Responsive Navigation
+- Desktop: Horizontal menu with "About us" and "Contact" links
+- Mobile: Hamburger menu with dropdown functionality
+
+### Hero Section
+- Compelling headlines with responsive line breaks
+- Feature list with emoji bullets
+- Prominent CTA button with arrow icon
+
+### Mobile Menu
+- Touch-optimized with enhanced tap areas
+- Smooth dropdown animation
+- Right-aligned menu items with chevron icons
+
+## 🔧 Customization
+
+### Content Updates
+Edit `src/data/pageData.tsx` to update:
+- Headlines and copy
+- Feature list items
+- Navigation menu items
+- Images and alt text
+
+### Styling
+- Modify `tailwind.config.js` for design system changes
+- Update `src/app/globals.css` for global styles
+- Adjust responsive breakpoints in component classes
+
+### Assets
+Replace images in the `public/` folder:
+- Logo: `fametonic-logo.png`
+- App mockup: `mobile-app-mockup.png`
+- Icons: SVG files for scalable graphics
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+```bash
+npm run build
+```
+Deploy to Vercel with automatic optimizations.
+
+### Other Platforms
+The project builds to static files and can be deployed to any hosting platform that supports Node.js applications.
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+
+**Built with ❤️ for Fametonic**

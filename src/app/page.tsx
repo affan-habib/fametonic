@@ -3,6 +3,7 @@
 
 import { pageData } from '@/data/pageData';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Page() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,10 +29,13 @@ export default function Page() {
       <div className="absolute w-full min-h-[724px] top-[81px] left-0">
         {/* Navigation bar */}
         <nav className="flex w-full items-center justify-center md:justify-between px-4 md:px-[211px] py-0 absolute top-0 left-0">
-          <img
+          <Image
             className="relative w-[105px] md:w-[173.12px] h-auto md:h-[74px]"
             alt={pageData.navigation.logo.alt}
             src={pageData.navigation.logo.src}
+            width={173}
+            height={74}
+            priority
           />
 
           {/* Desktop menu */}
@@ -49,7 +53,7 @@ export default function Page() {
               className="p-3 cursor-pointer"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <img src={pageData.hamburgerIcon} alt="Menu" width="20" height="15" />
+              <Image src={pageData.hamburgerIcon} alt="Menu" width={20} height={15} />
             </button>
           </div>
 
@@ -127,7 +131,7 @@ export default function Page() {
                     <span className="relative w-fit font-urbanist font-bold text-white text-xl tracking-[0] leading-[normal]">
                       {pageData.mainContent.cta.buttonText}
                     </span>
-                    <img src={pageData.mainContent.cta.arrowIcon} alt="Arrow" width="8" height="14" />
+                    <Image src={pageData.mainContent.cta.arrowIcon} alt="Arrow" width={8} height={14} />
                   </button>
 
                   <p className="relative self-stretch font-figtree font-normal text-white text-xs text-center tracking-[0] leading-4">
@@ -150,17 +154,23 @@ export default function Page() {
         </div>
 
         {/* Mobile app mockup image */}
-        <img
+        <Image
           className="absolute w-[280px] max-w-[90vw] h-auto top-[60px] left-1/2 transform -translate-x-1/2 object-cover block md:hidden z-0"
           alt={pageData.images.mockup.alt}
           src={pageData.images.mockup.src}
+          width={280}
+          height={400}
+          priority
         />
 
         {/* Desktop app mockup image */}
-        <img
+        <Image
           className="absolute w-[666px] h-[679px] top-[45px] right-[200px] object-cover hidden md:block z-0"
           alt={pageData.images.mockup.alt}
           src={pageData.images.mockup.src}
+          width={666}
+          height={679}
+          priority
         />
       </div>
     </div>
