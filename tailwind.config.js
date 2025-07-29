@@ -11,6 +11,12 @@ module.exports = {
         'urbanist': ['var(--font-urbanist)', 'sans-serif'],
         'figtree': ['var(--font-figtree)', 'sans-serif'],
       },
+      maxWidth: {
+        '7xl': '80rem',
+      },
+      screens: {
+        'xs': '475px',
+      },
     },
   },
   plugins: [],

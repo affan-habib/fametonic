@@ -27,9 +27,10 @@ export default function Page() {
         </p>
       </header>
 
-      <div className="absolute w-full min-h-[724px] top-[81px] left-0">
+      {/* Main container with max-width */}
+      <div className="relative w-full max-w-7xl mx-auto min-h-[724px] top-[81px]">
         {/* Navigation bar */}
-        <nav className="flex w-full items-center justify-center md:justify-between px-4 md:px-[211px] py-0 absolute top-0 left-0">
+        <nav className="flex w-full items-center justify-center md:justify-between px-4 md:px-8 py-0 absolute top-0 left-0 right-0">
           <Image
             className="relative w-[105px] md:w-[173.12px] h-auto md:h-[74px]"
             alt={pageData.navigation.logo.alt}
@@ -79,7 +80,7 @@ export default function Page() {
         </nav>
 
         {/* Main content area */}
-        <div className="flex flex-col w-full max-w-[516px] items-start gap-20 absolute top-[320px] md:top-[131px] left-0 md:left-[215px] px-4 md:px-0 md:pr-4">
+        <div className="flex flex-col w-full max-w-[516px] items-center md:items-start gap-20 absolute top-[320px] md:top-[131px] left-0 right-0 md:left-8 md:right-auto mx-auto md:mx-0 px-4 md:px-0">
           <div className="bg-transparent border-0 shadow-none">
             <div className="p-0">
               <div className="flex flex-col items-center md:items-start gap-[30px] relative self-stretch w-full z-10">
@@ -126,14 +127,14 @@ export default function Page() {
 
                 {/* CTA section */}
                 <div className="flex flex-col w-full max-w-[313px] items-center md:items-start gap-2.5 relative">
-                  <button className="flex items-center justify-center gap-2.5 px-10 py-2 relative self-stretch w-full bg-[#fc004e] rounded-[10px] shadow-[2px_2px_10px_#00e7f9] hover:bg-[#d1003f] transition-colors cursor-pointer">
+                  <button className="flex items-center justify-center gap-2.5 px-10 py-2 relative w-full bg-[#fc004e] rounded-[10px] shadow-[2px_2px_10px_#00e7f9] hover:bg-[#d1003f] transition-colors cursor-pointer">
                     <span className="relative w-fit font-urbanist font-bold text-white text-xl tracking-[0] leading-[normal]">
                       {pageData.mainContent.cta.buttonText}
                     </span>
                     <Image src={pageData.mainContent.cta.arrowIcon} alt="Arrow" width={8} height={14} />
                   </button>
 
-                  <p className="relative self-stretch font-figtree font-normal text-white text-xs text-center tracking-[0] leading-4">
+                  <p className="relative w-full font-figtree font-normal text-white text-xs text-center md:text-left tracking-[0] leading-4">
                     {pageData.mainContent.cta.description}
                   </p>
                 </div>
@@ -154,7 +155,7 @@ export default function Page() {
 
         {/* Mobile app mockup image */}
         <Image
-          className="absolute w-[280px] max-w-[90vw] h-auto top-[60px] left-1/2 transform -translate-x-1/2 object-cover block md:hidden z-0"
+          className="absolute w-[280px] max-w-[calc(100vw-2rem)] h-auto top-[50px] left-1/2 transform -translate-x-1/2 object-cover block md:hidden z-0"
           alt={pageData.images.mockup.alt}
           src={pageData.images.mockup.src}
           width={280}
@@ -164,7 +165,7 @@ export default function Page() {
 
         {/* Desktop app mockup image */}
         <Image
-          className="absolute w-[666px] h-[679px] top-[45px] right-[200px] object-cover hidden md:block z-0"
+          className="absolute w-[666px] h-[679px] top-[45px] right-0 object-cover hidden md:block z-0"
           alt={pageData.images.mockup.alt}
           src={pageData.images.mockup.src}
           width={666}
