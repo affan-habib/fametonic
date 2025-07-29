@@ -13,7 +13,7 @@ export default function Page() {
     <div className="relative w-full min-h-screen bg-[#010101] overflow-x-hidden">
       {/* Top promotional banner */}
       <header className="flex w-full items-center justify-center gap-2.5 px-4 lg:px-8 xl:px-[200px] py-2.5 absolute top-0 left-0 bg-[linear-gradient(90deg,rgba(252,0,78,1)_0%,rgba(16,203,224,1)_100%)]">
-        <p className="relative w-fit mt-[-1.00px] font-figtree font-bold text-base lg:text-xl xl:text-[22px] tracking-[0] leading-[normal] text-center">
+        <p className="relative w-fit max-w-[350px] md:max-w-none mt-[-1.00px] font-figtree font-bold text-base lg:text-xl xl:text-[22px] tracking-[0] leading-[normal] text-center">
           <span className="font-extrabold text-[#00e7f9]">
             {pageData.topBanner.title}
           </span>
