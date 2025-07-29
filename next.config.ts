@@ -11,10 +11,10 @@ const nextConfig: NextConfig = {
   // Enable compression
   compress: true,
   
-  // Optimize CSS
-  experimental: {
-    optimizeCss: true,
-  },
+  // Remove experimental CSS optimization for now
+  // experimental: {
+  //   optimizeCss: true,
+  // },
   
   // Headers for caching
   async headers() {

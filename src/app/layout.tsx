@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   description: "Discover your way to success with Fametonic. Start growing your influence, create viral content, and learn from expert-led courses designed for aspiring influencers.",
   keywords: "social media, influencer, content creation, viral content, TikTok, Instagram Reels, personal branding",
   authors: [{ name: "Fametonic" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
     title: "Fametonic - Turn Social Media Into a Profitable Career",
@@ -36,6 +35,11 @@ export const metadata: Metadata = {
     title: "Fametonic - Turn Social Media Into a Profitable Career",
     description: "Discover your way to success with Fametonic. Start growing your influence, create viral content, and learn from expert-led courses designed for aspiring influencers.",
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
