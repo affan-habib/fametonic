@@ -21,7 +21,7 @@ export default function Page() {
             {" "}
             Extra 25% OFF, Limited Spots - start your journey today
           </span>
-          <span className="[font-family:'Nunito',Helvetica] font-semibold text-white">
+          <span className="font-nunito font-semibold text-white">
             !
           </span>
         </p>
@@ -47,7 +47,7 @@ export default function Page() {
         </nav>
 
         {/* Main content area */}
-        <div className="flex flex-col w-full max-w-[516px] items-start gap-20 absolute top-[131px] left-4 md:left-[215px] pr-4">
+        <div className="flex flex-col w-full max-w-[516px]  items-start gap-20 absolute top-[131px] left-4 md:left-[215px] pr-4">
           <div className="bg-transparent border-0 shadow-none">
             <div className="p-0">
               <div className="flex flex-col items-start gap-[30px] relative self-stretch w-full">
@@ -69,7 +69,7 @@ export default function Page() {
                         key={index}
                         className="flex items-center gap-2.5 relative self-stretch w-full"
                       >
-                        <span className="mt-[-1.00px] relative w-fit [font-family:'Nunito',Helvetica] font-medium text-white text-[22px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
+                        <span className="mt-[-1.00px] relative w-fit font-nunito font-medium text-white text-[22px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
                           ✨
                         </span>
                         <p className="relative flex-1 mt-[-1.00px] font-figtree font-semibold text-white text-base tracking-[0] leading-[22px]">
