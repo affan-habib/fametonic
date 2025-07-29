@@ -57,10 +57,10 @@ export default function Page() {
         </nav>
 
         {/* Main content area */}
-        <div className="flex flex-col w-full max-w-[516px]  items-start gap-20 absolute top-[131px] left-4 md:left-[215px] pr-4">
+        <div className="flex flex-col w-full max-w-[516px] items-start gap-20 absolute top-[400px] md:top-[131px] left-4 md:left-[215px] pr-4">
           <div className="bg-transparent border-0 shadow-none">
             <div className="p-0">
-              <div className="flex flex-col items-center md:items-start gap-[30px] relative self-stretch w-full">
+              <div className="flex flex-col items-center md:items-start gap-[30px] relative self-stretch w-full z-10">
                 {/* Headline section */}
                 <div className="flex flex-col items-center md:items-start gap-4 relative self-stretch w-full">
                   <div className="flex flex-col items-center md:items-start relative self-stretch w-full">
@@ -90,6 +90,17 @@ export default function Page() {
                   </div>
                 </div>
 
+                {/* Terms and footer - Mobile: above button */}
+                <div className="flex md:hidden flex-col items-center justify-center gap-3 relative self-stretch w-full">
+                  <p className="relative self-stretch mt-[-1.00px] font-figtree font-medium text-[#aaaaaa] text-[12px] tracking-[0] leading-[normal] text-center">
+                    By clicking &quot;Get Started&quot;, you agree with Terms and
+                    Conditions, Privacy Policy, Subscription Terms
+                  </p>
+                  <p className="relative self-stretch font-figtree font-medium text-[#aaaaaa] text-[12px] tracking-[0] leading-[normal] text-center">
+                    Fametonic 2025 � All Rights Reserved.
+                  </p>
+                </div>
+
                 {/* CTA section */}
                 <div className="flex flex-col w-[313px] items-center md:items-start gap-2.5 relative">
                   <button className="flex items-center justify-center gap-2.5 px-10 py-2 relative self-stretch w-full bg-[#fc004e] rounded-[10px] shadow-[2px_2px_10px_#00e7f9] hover:bg-[#d1003f] transition-colors cursor-pointer">
@@ -106,13 +117,13 @@ export default function Page() {
                   </p>
                 </div>
 
-                {/* Terms and footer */}
-                <div className="flex flex-col items-center justify-center gap-3 relative self-stretch w-full">
-                  <p className="relative self-stretch mt-[-1.00px] font-figtree font-medium text-[#aaaaaa] text-xs tracking-[0] leading-[normal] text-center md:text-left">
+                {/* Terms and footer - Desktop: below button */}
+                <div className="hidden md:flex flex-col items-center justify-center gap-3 relative self-stretch w-full">
+                  <p className="relative self-stretch mt-[-1.00px] font-figtree font-medium text-[#aaaaaa] text-[12px] tracking-[0] leading-[normal] text-center md:text-left">
                     By clicking &quot;Get Started&quot;, you agree with Terms and
                     Conditions, Privacy Policy, Subscription Terms
                   </p>
-                  <p className="relative self-stretch font-figtree font-medium text-[#aaaaaa] text-[10px] tracking-[0] leading-[normal] text-center md:text-left">
+                  <p className="relative self-stretch font-figtree font-medium text-[#aaaaaa] text-[12px] tracking-[0] leading-[normal] text-center md:text-left">
                     Fametonic 2025 � All Rights Reserved.
                   </p>
                 </div>
@@ -121,9 +132,16 @@ export default function Page() {
           </div>
         </div>
 
-        {/* App mockup image */}
+        {/* Mobile app mockup image */}
         <img
-          className="absolute w-[666px] h-[679px] top-[45px] right-[200px] object-cover hidden md:block"
+          className="absolute w-[300px] h-auto top-[100px] left-1/2 transform -translate-x-1/2 object-cover block md:hidden z-0"
+          alt="Influe mobile mockup"
+          src="/Influe_mobile_mockup_3 1.png"
+        />
+
+        {/* Desktop app mockup image */}
+        <img
+          className="absolute w-[666px] h-[679px] top-[45px] right-[200px] object-cover hidden md:block z-0"
           alt="Influe mobile mockup"
           src="/Influe_mobile_mockup_3 1.png"
         />
