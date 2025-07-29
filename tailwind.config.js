@@ -10,7 +10,6 @@ module.exports = {
       fontFamily: {
         'urbanist': ['var(--font-urbanist)', 'sans-serif'],
         'figtree': ['var(--font-figtree)', 'sans-serif'],
-        'nunito': ['var(--font-nunito)', 'sans-serif'],
       },
     },
   },
