@@ -12,8 +12,8 @@ export default function Page() {
   return (
     <div className="relative w-full min-h-screen bg-[#010101] overflow-x-hidden">
       {/* Top promotional banner */}
-      <header className="flex w-full items-center justify-center gap-2.5 px-4 md:px-[200px] py-2.5 absolute top-0 left-0 bg-[linear-gradient(90deg,rgba(252,0,78,1)_0%,rgba(16,203,224,1)_100%)]">
-        <p className="relative w-fit mt-[-1.00px] font-figtree font-bold text-base md:text-[22px] tracking-[0] leading-[normal] text-center">
+      <header className="flex w-full items-center justify-center gap-2.5 px-4 lg:px-8 xl:px-[200px] py-2.5 absolute top-0 left-0 bg-[linear-gradient(90deg,rgba(252,0,78,1)_0%,rgba(16,203,224,1)_100%)]">
+        <p className="relative w-fit mt-[-1.00px] font-figtree font-bold text-base lg:text-xl xl:text-[22px] tracking-[0] leading-[normal] text-center">
           <span className="font-extrabold text-[#00e7f9]">
             {pageData.topBanner.title}
           </span>
@@ -30,9 +30,9 @@ export default function Page() {
       {/* Main container with max-width */}
       <div className="relative w-full max-w-7xl mx-auto min-h-[724px] top-[81px]">
         {/* Navigation bar */}
-        <nav className="flex w-full items-center justify-center md:justify-between px-4 md:px-8 py-0 absolute top-0 left-0 right-0">
+        <nav className="flex w-full items-center justify-center md:justify-between px-4 md:px-0 py-0 absolute top-0 left-0 right-0 z-10">
           <Image
-            className="relative w-[105px] md:w-[173.12px] h-auto md:h-[74px]"
+            className="relative w-[105px] md:w-[173.12px] h-auto md:h-[74px] md:ml-8"
             alt={pageData.navigation.logo.alt}
             src={pageData.navigation.logo.src}
             width={173}
@@ -41,7 +41,7 @@ export default function Page() {
           />
 
           {/* Desktop menu */}
-          <div className="hidden md:inline-flex items-end justify-center gap-10 relative flex-[0_0_auto]">
+          <div className="hidden md:inline-flex items-end justify-center gap-10 relative flex-[0_0_auto] md:mr-8">
             {pageData.navigation.menuItems.map((item: MenuItem, index: number) => (
               <a key={index} href={item.href} className="relative w-[76px] mt-[-1.00px] font-figtree font-semibold text-[#a9a9a9] text-lg text-center tracking-[0] leading-[normal] cursor-pointer hover:text-white transition-colors">
                 {item.label}
@@ -163,9 +163,21 @@ export default function Page() {
           priority
         />
 
-        {/* Desktop app mockup image */}
+        {/* Background blurred image - only when overlapping (md to lg breakpoint) */}
+        <div className="absolute inset-0 hidden md:block lg:hidden z-0">
+          <Image
+            className="absolute w-full h-full object-cover opacity-20 blur-sm"
+            alt={pageData.images.mockup.alt}
+            src={pageData.images.mockup.src}
+            width={666}
+            height={679}
+            priority
+          />
+        </div>
+        
+        {/* Desktop app mockup image - clear image when no overlap */}
         <Image
-          className="absolute w-[666px] h-[679px] top-[45px] right-0 object-cover hidden md:block z-0"
+          className="absolute w-[666px] h-[679px] top-[45px] right-0 object-cover hidden lg:block z-1"
           alt={pageData.images.mockup.alt}
           src={pageData.images.mockup.src}
           width={666}
